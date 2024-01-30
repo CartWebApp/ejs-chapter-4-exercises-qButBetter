@@ -11,12 +11,12 @@ function reverseArray(arrayInput) {
 }
 
 function reverseArrayInPlace(arrayInput) {
-  let tempVal = arrayInput[arrayInput.length - 1];
+  let tempVal = arrayInput[0];
+  let tempVal2 = arrayInput[arrayInput.length - 1];
 
-  for (i = 0; i < arrayInput.length; i++) {
+  for (i = arrayInput.length; i > 0; i--) {
     arrayInput[i] = tempVal;
-    console.log(tempVal);
-    tempVal = arrayInput[arrayInput.length - (i + 2)];
+    tempVal = arrayInput[i + 1];
   }
 
   return (arrayInput);
