@@ -1,15 +1,28 @@
-function range(start, end, step = 1) {
-  // Add code.
+//Makes an array from start --> finish
+function range(startNum, endNum, stepInput = 1) {
+  let outputArray = new Array(Math.abs((startNum - endNum) / stepInput - 1));
+  let numAdd = startNum;
+
+  // Experimental conditional
+  for (i = 0; i < outputArray.length; i++) {
+      outputArray[i] = (numAdd);
+      numAdd += stepInput;
+  }
+
+  return (outputArray);
 }
 
-function sum(numbers) {
-  // Add code.
+//Takes array, and adds the sum of all numbers inside.
+function sum(arrayInput) {
+  let sum = 0;
+  const inputArray = arrayInput;
+
+  for (i = 0; i < inputArray.length; i++) {
+      sum += inputArray[i];
+  }
+
+  return (sum);
 }
-
-
-
-
-
 
 // tests
 console.log(range(1, 10));

@@ -1,9 +1,29 @@
-function arrayToList(arr) {
-  // Add code.
+function arrayToList(arrayInput) {
+  // arrayInput[value]
+
+  // Might have to define length of list
+  let listOutput = {};
+
+for (i = arrayInput.length; i > 0; i--) {
+
 }
 
-function listToArray(list, arr) {
-  // Add code.
+
+}
+
+function listToArray(listInput, arr) {
+  // listInput[value]
+
+  // Might have to define length of the array
+  let arrayOutput = [];
+
+  let iterator = 0;
+  while (listInput[value] != null) {
+      arrayOutput[iterator] = listInput[value]
+      iterator++;
+  }
+
+  return(arrayOutput);
 }
 
 // tests
