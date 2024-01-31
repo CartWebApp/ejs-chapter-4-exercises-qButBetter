@@ -11,21 +11,19 @@ function reverseArray(arrayInput) {
 }
 
 function reverseArrayInPlace(arrayInput) {
+// Use .pop()
+let tempVal = null;
 
-  for (i = 0; i < arrayInput.length; i++) {
-    // Adds arrayInput of i, starting at 0 to end of array
-    arrayInput.push(arrayInput[i]);
-    // Removes previously added item from where it was
-    arrayInput.shift();
-  }
+for (i = arrayInput.length; i > 0; i--) {
+  tempVal = arrayInput.pop();
+  arrayInput.unshift(tempVal);
+}
 
-return (arrayInput);
 }
 
 // tests 
 console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
 let arrayValue = [1, 2, 3, 4, 5];
-reverseArrayInPlace(arrayValue);
-console.log(arrayValue);
+console.log(reverseArrayInPlace(arrayValue));
 // → [5, 4, 3, 2, 1]

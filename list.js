@@ -11,15 +11,11 @@ function arrayToList(arrayInput) {
 return(listOutput);
 }
 
-function listToArray(value, listInput) {
+function listToArray(listInput) {
   // listInput[value]
 
   // Might have to define length of the array
-  let arrayOutput = [];
-
-  while (listInput.value != null) {
-    arrayOutput.push(listInput.value);
-  }
+  let arrayOutput = Object.keys[listInput];
 
   return (arrayOutput);
 }
@@ -30,7 +26,10 @@ for (i = 0; i < listInput.length; i++) {
 
 }
 
+}
 
+function nth () {
+  
 }
 
 let list = {
