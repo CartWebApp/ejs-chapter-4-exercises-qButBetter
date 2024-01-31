@@ -17,11 +17,20 @@ function listToArray(value, listInput) {
   // Might have to define length of the array
   let arrayOutput = [];
 
-  for (i = 0; i < listInput.length; i++) {
-
+  while (listInput.value != null) {
+    arrayOutput.push(listInput.value);
   }
 
   return (arrayOutput);
+}
+
+function prepend(listInput, num) {
+
+for (i = 0; i < listInput.length; i++) {
+
+}
+
+
 }
 
 let list = {

@@ -11,15 +11,15 @@ function reverseArray(arrayInput) {
 }
 
 function reverseArrayInPlace(arrayInput) {
-  let tempVal = arrayInput[0];
-  let tempVal2 = arrayInput[arrayInput.length - 1];
 
-  for (i = arrayInput.length; i > 0; i--) {
-    arrayInput[i] = tempVal;
-    tempVal = arrayInput[i + 1];
+  for (i = 0; i < arrayInput.length; i++) {
+    // Adds arrayInput of i, starting at 0 to end of array
+    arrayInput.push(arrayInput[i]);
+    // Removes previously added item from where it was
+    arrayInput.shift();
   }
 
-  return (arrayInput);
+return (arrayInput);
 }
 
 // tests 

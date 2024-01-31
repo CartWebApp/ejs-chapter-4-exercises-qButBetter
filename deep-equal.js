@@ -1,23 +1,22 @@
 function deepEqual(input1, input2) {
 
+  // Checks to see if any are null
   if (input1 != null && input2 != null) {
 
+    // Sees if they are both an object, otherwise compares with ===
     if ((typeof (input1) === "object") && typeof (input2) === "object") {
-      if (Object.keys(input1).length === Object.keys(input2)) {
-        let part1 = null;
-        let part2 = null;
 
-        for (i = 0; i < Object.keys(input1).length; i++) {
-          part1 += Object.keys(input1)[i];
-        }
+      // Checks to see if the array made by Object.keys are the same length
+      if (Object.keys(input1).length == Object.keys(input2)) {
+        let arr1 = Object.keys(input1);
+        let arr2 = Object.keys(input2);
 
-        for (i = 0; i < Object.keys(input1).length; i++) {
-          part2 += Object.keys(input2)[i];
-        }
-
-        if (part1 == part2) {
-          return (true)
-        }
+        // Iterates thru the arrays to see if all inside values match up
+          for (i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+              return(false);
+            }
+          }
 
       }
       else {
@@ -33,6 +32,8 @@ function deepEqual(input1, input2) {
     return (false);
   }
 
+  // Default statement
+  return(true);
 }
 
 // tests
