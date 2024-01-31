@@ -1,35 +1,44 @@
 function arrayToList(arrayInput) {
   // arrayInput[value]
 
-  // Might have to define length of list
   let listOutput = null;
 
-  for (i = arrayInput.length - 2; i >= 0; i--) {
-    listOutput = {value: arrayInput[i], rest: listOutput};
+  for (i = arrayInput.length - 1; i >= 0; i--) {
+    listOutput = { value: arrayInput[i], rest: listOutput};
   }
 
-return(listOutput);
+  return (listOutput);
 }
 
 function listToArray(listInput) {
   // listInput[value]
 
   // Might have to define length of the array
-  let arrayOutput = Object.keys[listInput];
+  let arrayOutput = [];
+  const objList = listInput;
+
+  for (let node = objList; node; node = node.rest) {
+    arrayOutput.push(node.value);
+  }
 
   return (arrayOutput);
 }
 
-function prepend(listInput, num) {
+function prepend(element, listInput) {
+  let listPart1 = { value: element, rest: listInput };
 
-for (i = 0; i < listInput.length; i++) {
-
+  return (listPart1);
 }
 
-}
+function nth(listInput, num) {
 
-function nth () {
-  
+  for (let node = listInput; node; node.rest) {
+    if (node.value === num) {
+      return (node);
+    }
+  }
+
+  return(null);
 }
 
 let list = {
@@ -44,12 +53,14 @@ let list = {
 };
 
 // tests
-// console.log(arrayToList([10, 20]));
+console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
-// console.log(listToArray(arrayToList([10, 20, 30])));
-console.log(listToArray(list));
-// // → [10, 20, 30]
-// console.log(prepend(10, prepend(20, null)));
-// // → {value: 10, rest: {value: 20, rest: null}}
-// console.log(nth(arrayToList([10, 20, 30]), 1));
-// // → 20
+console.log(listToArray(arrayToList([10, 20, 30])));
+// → [10, 20, 30]
+console.log(prepend(10, prepend(20, null)));
+// → {value: 10, rest: {value: 20, rest: null}}
+
+
+// Fix this one
+console.log(nth(arrayToList([10, 20, 30]), 1));
+// → 20

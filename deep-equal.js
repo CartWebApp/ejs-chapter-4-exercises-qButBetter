@@ -7,7 +7,7 @@ function deepEqual(input1, input2) {
     if ((typeof (input1) === "object") && typeof (input2) === "object") {
 
       // Checks to see if the array made by Object.keys are the same length
-      if (Object.keys(input1).length == Object.keys(input2)) {
+      if (Object.keys(input1).length === Object.keys(input2)) {
         let arr1 = Object.keys(input1);
         let arr2 = Object.keys(input2);
 

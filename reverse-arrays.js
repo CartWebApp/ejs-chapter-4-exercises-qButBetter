@@ -11,14 +11,22 @@ function reverseArray(arrayInput) {
 }
 
 function reverseArrayInPlace(arrayInput) {
-// Use .pop()
-let tempVal = null;
+  // Use .pop()
+  let tempVal = null;
+  let tempVal2 = null;
 
-for (i = arrayInput.length; i > 0; i--) {
-  tempVal = arrayInput.pop();
-  arrayInput.unshift(tempVal);
-}
+  for (i = 0; i < Math.floor(arrayInput.length / 2); i++) {
+    tempVal = arrayInput[arrayInput.length - (i + 1)];
+    tempVal2 = arrayInput[i];
 
+    console.log(tempVal);
+    console.log(tempVal2);
+
+    arrayInput[i] = tempVal;
+    arrayInput[arrayInput.length - (i + 1)] = tempVal2;
+  }
+
+  return (arrayInput);
 }
 
 // tests 
