@@ -35,6 +35,7 @@ function nth(listInput, num) {
 
   for (let node = listInput; node; node.rest) {
     if (node.value === num) {
+      // Make node go down further into the object
       return (counter);
     }
     else if (!(node.value === num)) {
