@@ -4,7 +4,7 @@ function arrayToList(arrayInput) {
   let listOutput = null;
 
   for (i = arrayInput.length - 1; i >= 0; i--) {
-    listOutput = { value: arrayInput[i], rest: listOutput};
+    listOutput = { value: arrayInput[i], rest: listOutput };
   }
 
   return (listOutput);
@@ -31,15 +31,13 @@ function prepend(element, listInput) {
 }
 
 function nth(listInput, num) {
+// Might have to iterate thru and create a "index" / "counter" variable to return that as a number.
+let counter = 0;
 
-  for (let node = listInput; node; node.rest) {
-    if (node.value === num) {
-      // How to access the index at the given "node" point?
-      return (listInput[node]);
-    }
-  }
+for (let node = listInput; node; node.rest) {
+  // Smthn
+}
 
-  return(null);
 }
 
 let list = {

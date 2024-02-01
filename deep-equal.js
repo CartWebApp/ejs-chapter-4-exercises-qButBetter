@@ -5,7 +5,7 @@ function deepEqual(input1, input2) {
 
     // Checks to see if BOTH null
     if ((input1 == null) && (input2 == null)) {
-      return (false);
+      return (true);
     }
     else {
       // Checks if all values inside are the same
