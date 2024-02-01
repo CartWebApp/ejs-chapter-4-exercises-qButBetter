@@ -34,7 +34,8 @@ function nth(listInput, num) {
 
   for (let node = listInput; node; node.rest) {
     if (node.value === num) {
-      return (node);
+      // How to access the index at the given "node" point?
+      return (listInput[node]);
     }
   }
 
@@ -52,13 +53,13 @@ let list = {
   }
 };
 
-// tests
-console.log(arrayToList([10, 20]));
-// → {value: 10, rest: {value: 20, rest: null}}
-console.log(listToArray(arrayToList([10, 20, 30])));
-// → [10, 20, 30]
-console.log(prepend(10, prepend(20, null)));
-// → {value: 10, rest: {value: 20, rest: null}}
+// // tests
+// console.log(arrayToList([10, 20]));
+// // → {value: 10, rest: {value: 20, rest: null}}
+// console.log(listToArray(arrayToList([10, 20, 30])));
+// // → [10, 20, 30]
+// console.log(prepend(10, prepend(20, null)));
+// // → {value: 10, rest: {value: 20, rest: null}}
 
 
 // Fix this one

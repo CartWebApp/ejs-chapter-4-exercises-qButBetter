@@ -1,39 +1,31 @@
 function deepEqual(input1, input2) {
 
-  // Checks to see if any are null
-  if (input1 != null && input2 != null) {
+  // Checks to see if EITHER are null
+  if ((input1 != null) || (input2 != null)) {
 
-    // Sees if they are both an object, otherwise compares with ===
-    if ((typeof (input1) === "object") && typeof (input2) === "object") {
-
-      // Checks to see if the array made by Object.keys are the same length
-      if (Object.keys(input1).length === Object.keys(input2)) {
-        let arr1 = Object.keys(input1);
-        let arr2 = Object.keys(input2);
-
-        // Iterates thru the arrays to see if all inside values match up
-          for (i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
-              return(false);
-            }
-          }
-
-      }
-      else {
-        return (false);
-      }
+    // Checks to see if BOTH null
+    if ((input1 == null) && (input2 == null)) {
+      return (false);
     }
     else {
-      return (input1 === input2);
+      // Checks if all values inside are the same
+      if (typeof (input1) == "object" && typeof (input2) == "object") {
+        for (let node = input1; node; node.rest) {
+          for (let node2 = input2; node2; node2.rest) {
+            if (node.value != node2.value) {
+              return (false);
+            }
+          }
+        }
+      }
+      // Returns the statement if they're NOT an object
+      else {
+        return (input1 === input2);
+      }
     }
-
   }
-  else {
-    return (false);
-  }
-
   // Default statement
-  return(true);
+  return (true);
 }
 
 // tests
