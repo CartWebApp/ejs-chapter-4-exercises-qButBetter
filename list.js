@@ -31,19 +31,17 @@ function prepend(element, listInput) {
 }
 
 function nth(listInput, num) {
-  // Might have to iterate thru and create a "index" / "counter" variable to return that as a number.
   let counter = 0;
 
   for (let node = listInput; node; node.rest) {
     if (node.value === num) {
       return (counter);
     }
-    else {
+    else if (!(node.value === num)) {
       counter++;
     }
   }
-
-  // If it reaches the end w/o the specified value
+  
   return("Specified number does not exist in this object!");
 }
 

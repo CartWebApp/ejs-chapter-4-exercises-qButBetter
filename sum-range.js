@@ -3,7 +3,6 @@ function range(startNum, endNum, stepInput = 1) {
   let outputArray = new Array(Math.abs((startNum - endNum) / stepInput - 1));
   let numAdd = startNum;
 
-  // Experimental conditional
   for (i = 0; i < outputArray.length; i++) {
       outputArray[i] = (numAdd);
       numAdd += stepInput;
