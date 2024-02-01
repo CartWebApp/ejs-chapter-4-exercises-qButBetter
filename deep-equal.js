@@ -1,5 +1,8 @@
 function deepEqual(input1, input2) {
 
+  // Checks to see if EITHER are null
+  if ((input1 != null) || (input2 != null)) {
+
     // Checks to see if BOTH null
     if ((input1 == null) && (input2 == null)) {
       return (true);
@@ -20,6 +23,7 @@ function deepEqual(input1, input2) {
         return (input1 === input2);
       }
     }
+  }
   // Default statement
   return (true);
 }
