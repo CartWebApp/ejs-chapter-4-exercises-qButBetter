@@ -31,19 +31,15 @@ function prepend(element, listInput) {
 }
 
 function nth(listInput, num) {
+  let arr = listToArray(listInput);
   let counter = 0;
 
-  for (let node = listInput; node; node.rest) {
-    if (node.value === num) {
-      // Make node go down further into the object
-      return (counter);
-    }
-    else if (!(node.value === num)) {
-      counter++;
+  for (i = 0; i < arr.length; i++) {
+    if (i == num) {
+      return (arr[i]);
     }
   }
-  
-  return("Specified number does not exist in this object!");
+  return;
 }
 
 let list = {
@@ -58,7 +54,7 @@ let list = {
 }
 
 // tests
-// console.log(arrayToList([10, 20]));
+console.log(arrayToList([10, 20]));
 // // → {value: 10, rest: {value: 20, rest: null}}
 // console.log(listToArray(arrayToList([10, 20, 30])));
 // // → [10, 20, 30]
