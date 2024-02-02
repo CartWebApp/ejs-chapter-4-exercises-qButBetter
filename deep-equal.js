@@ -15,15 +15,12 @@ function deepEqual(input1, input2) {
       let obj1 = Object.keys(input1);
       let obj2 = Object.keys(input2);
 
-      console.log(obj1);
-      console.log(obj2);
-
       // Checks length of obj1 and obj2
       if (obj1.length == obj2.length) {
         for (prop in input1) {
           for (prop2 in input2) {
 
-            if (prop != prop2) {
+            if (!prop === prop2) {
               return (false);
             }
 
