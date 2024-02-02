@@ -24,7 +24,7 @@ function deepEqual(input1, input2) {
           for (prop2 in input2) {
 
             if (prop != prop2) {
-              return(false);
+              return (false);
             }
 
           }

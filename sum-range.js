@@ -4,8 +4,8 @@ function range(startNum, endNum, stepInput = 1) {
   let numAdd = startNum;
 
   for (i = 0; i < outputArray.length; i++) {
-      outputArray[i] = (numAdd);
-      numAdd += stepInput;
+    outputArray[i] = (numAdd);
+    numAdd += stepInput;
   }
 
   return (outputArray);
@@ -17,7 +17,7 @@ function sum(arrayInput) {
   const inputArray = arrayInput;
 
   for (i = 0; i < inputArray.length; i++) {
-      sum += inputArray[i];
+    sum += inputArray[i];
   }
 
   return (sum);
